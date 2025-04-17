@@ -1,0 +1,44 @@
+[0.009s] Invoking command in '/home/bob/exo_ws/build/exoskeleton_description': /usr/bin/cmake --build /home/bob/exo_ws/build/exoskeleton_description -- -j8 -l8
+[0.029s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.136s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.143s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[0.165s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.167s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.172s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.181s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.192s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.229s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.231s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.257s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.258s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.341s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.491s] -- Found rviz2: 11.2.16 (/opt/ros/humble/share/rviz2/cmake)
+[0.491s] -- Found xacro: 2.0.13 (/opt/ros/humble/share/xacro/cmake)
+[0.550s] -- Configuring done
+[0.554s] -- Generating done
+[0.556s] -- Build files have been written to: /home/bob/exo_ws/build/exoskeleton_description
+[0.577s] Invoked command in '/home/bob/exo_ws/build/exoskeleton_description' returned '0': /usr/bin/cmake --build /home/bob/exo_ws/build/exoskeleton_description -- -j8 -l8
+[0.585s] Invoking command in '/home/bob/exo_ws/build/exoskeleton_description': /usr/bin/cmake --install /home/bob/exo_ws/build/exoskeleton_description
+[0.591s] -- Install configuration: ""
+[0.591s] -- Execute custom install script
+[0.592s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/urdf/exo.urdf
+[0.592s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/urdf/exo.urdfdir
+[0.592s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/urdf/exo.xacro
+[0.592s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/launch/display.launch.py
+[0.593s] -- Symlinking: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/rviz/urdf.rviz
+[0.599s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/ament_index/resource_index/package_run_dependencies/exoskeleton_description
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/ament_index/resource_index/parent_prefix_path/exoskeleton_description
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/environment/ament_prefix_path.sh
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/environment/ament_prefix_path.dsv
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/environment/path.sh
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/environment/path.dsv
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/local_setup.bash
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/local_setup.sh
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/local_setup.zsh
+[0.600s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/local_setup.dsv
+[0.600s] -- Symlinking: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/package.dsv
+[0.608s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/ament_index/resource_index/packages/exoskeleton_description
+[0.608s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/cmake/exoskeleton_descriptionConfig.cmake
+[0.608s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/cmake/exoskeleton_descriptionConfig-version.cmake
+[0.608s] -- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/package.xml
+[0.609s] Invoked command in '/home/bob/exo_ws/build/exoskeleton_description' returned '0': /usr/bin/cmake --install /home/bob/exo_ws/build/exoskeleton_description

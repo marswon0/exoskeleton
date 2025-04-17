@@ -1,0 +1,6 @@
+Invoking command in '/home/bob/exo_ws/build/exoskeleton_description': /usr/bin/cmake /home/bob/exo_ws/src/exoskeleton_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/bob/exo_ws/install/exoskeleton_description
+Invoked command in '/home/bob/exo_ws/build/exoskeleton_description' returned '0': /usr/bin/cmake /home/bob/exo_ws/src/exoskeleton_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/bob/exo_ws/install/exoskeleton_description
+Invoking command in '/home/bob/exo_ws/build/exoskeleton_description': /usr/bin/cmake --build /home/bob/exo_ws/build/exoskeleton_description -- -j8 -l8
+Invoked command in '/home/bob/exo_ws/build/exoskeleton_description' returned '0': /usr/bin/cmake --build /home/bob/exo_ws/build/exoskeleton_description -- -j8 -l8
+Invoking command in '/home/bob/exo_ws/build/exoskeleton_description': /usr/bin/cmake --install /home/bob/exo_ws/build/exoskeleton_description
+Invoked command in '/home/bob/exo_ws/build/exoskeleton_description' returned '1': /usr/bin/cmake --install /home/bob/exo_ws/build/exoskeleton_description
