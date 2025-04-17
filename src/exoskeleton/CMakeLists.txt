@@ -7,9 +7,8 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(xacro REQUIRED)
+find_package(urdf REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,5 +21,19 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+# Xacro to URDF conversion
+add_custom_command(
+  OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/urdf/exo.urdf
+  COMMAND xacro ${CMAKE_CURRENT_SOURCE_DIR}/urdf/exo.urdf.xacro -o ${CMAKE_CURRENT_SOURCE_DIR}/urdf/exo.urdf
+  DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/urdf/exo.urdf.xacro
+  COMMENT "Generating URDF from Xacro"
+)
+
+# Installation rules
+install(
+  DIRECTORY urdf launch meshes config
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()
