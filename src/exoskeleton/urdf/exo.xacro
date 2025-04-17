@@ -21,8 +21,16 @@
   <!-- Position hip joint at the bottom of base_link (assuming base_link height is negligible) -->
   <origin xyz="0 0 -.15" rpy="0 0 0"/>
   <axis xyz="0 0 1"/>
-  <limit effort="100" velocity="2.0" lower="-1.0" upper="1.0"/>
   <dynamics damping="0.1" friction="0.01"/>
+  <!-- 
+    ISO 13485 Compliance: Prevents Excessive internal rotation (> 45°) and excessive external rotation (> 45°)
+    internal rotation: 0 ~ 45°
+    external rotation: 0 ~ 45°
+    walking: 20° ~ 30°
+  -->
+  <limit effort="350" velocity="3.0" lower="-0.7" upper="0.7"/> <!-- 0.7rad ~= 40° -->
+  <safety_controller k_velocity="20" soft_lower_limit="-0.665" soft_upper_limit="0.665"/> <!-- 0.665rad ~= 38° -->
+
 </joint>
 
 <!-- Thigh Link -->
@@ -44,15 +52,23 @@
   <child link="shank_link"/>
   <!-- Position knee joint at the end of thigh_link -->
   <origin xyz="0 0 -0.15" rpy="0 0 0"/> <!-- Negative Z to move down from thigh_link -->
-  <axis xyz="0 0 1"/>
-  <limit effort="50" velocity="1.5" lower="0" upper="2.0"/>
+  <axis xyz="0 1 0"/>
   <dynamics damping="0.05" friction="0.005"/>
+  <!-- 
+    ISO 13485 Compliance: Prevents overextension (lower="0") and excessive flexion (upper="2.0" ≈ 150°).
+    walking: 0~1.22 rad
+    stairs: 0~1.57 rad 
+    exercise: 0~2.09 rad 
+  -->
+  <limit effort="300" velocity="2.5" lower="0" upper="2"/> 
+  <safety_controller k_velocity="30" soft_lower_limit="0.05" soft_upper_limit="1.9"/> 
 </joint>
 
 <!-- Shank Link -->
 <link name="shank_link">
   <visual>
     <geometry><cylinder length="0.35" radius="0.025"/></geometry>
+    <origin xyz="0 0 -0.175" rpy="0 0 0"/>
     <material name="red"><color rgba="0.8 0 0 1"/></material>
   </visual>
   <collision><geometry><cylinder length="0.35" radius="0.025"/></geometry></collision>
@@ -67,10 +83,16 @@
   <parent link="shank_link"/>
   <child link="foot_link"/>
   <!-- Position ankle joint at the end of shank_link -->
-  <origin xyz="0 0 -0.175" rpy="0 0 0"/> <!-- Negative Z to move down from shank_link -->
+  <origin xyz="0 0 -0.35" rpy="0 0 0"/> <!-- Negative Z to move down from shank_link -->
   <axis xyz="0 1 0"/>
-  <limit effort="30" velocity="1.0" lower="-0.5" upper="0.5"/>
   <dynamics damping="0.03" friction="0.005"/>
+  <!--
+    typical ROM for ankle joint is 20° dorsiflexion and 50° plantarflexion
+    Dorsiflexion (upward movement)‌: 0 - 20° (0 - 0.35rad)
+    Plantarflexion (downward movement)‌: 0 - 55° (0 - 0.96rad)
+  -->
+  <limit effort="300" velocity="3.0" lower="-0.3" upper="0.3"/>
+  <safety_controller k_velocity="50" soft_lower_limit="-0.25" soft_upper_limit="0.25"/>
 </joint>
 
 <!-- Foot Link -->
