@@ -1,0 +1,1 @@
+/home/bob/exo_ws/build/exo_urdf/ament_cmake_environment_hooks/local_setup.sh

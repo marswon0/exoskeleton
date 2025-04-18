@@ -1,6 +1,0 @@
--- Install configuration: ""
--- Execute custom install script
--- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/urdf/exo.urdf
--- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/urdf/exo.urdfdir
--- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/urdf/exo.xacro
--- Up-to-date symlink: /home/bob/exo_ws/install/exoskeleton_description/share/exoskeleton_description/launch/display.launch.py
