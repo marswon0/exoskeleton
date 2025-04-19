@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="exo_leg" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="exo" xmlns:xacro="http://ros.org/wiki/xacro">
 
 
   <!-- Properties -->
@@ -383,7 +383,7 @@
   <!-- ROS Control Plugin (Optimized) -->
   <gazebo>
     <plugin name="exo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/exoskeleton</robotNamespace>
+      <robotNamespace>/exo</robotNamespace>
       <controlPeriod>0.001</controlPeriod>  <!-- 1kHz control rate -->
       <robotParam>robot_description</robotParam>
       <parameters>$(find exo_urdf)/config/controllers.yaml</parameters>
