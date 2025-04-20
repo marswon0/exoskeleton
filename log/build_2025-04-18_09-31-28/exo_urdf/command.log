@@ -1,4 +1,0 @@
-Invoking command in '/home/bob/exo_ws/build/exo_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bob/exo_ws/build/exo_urdf -- -j8 -l8
-Invoked command in '/home/bob/exo_ws/build/exo_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bob/exo_ws/build/exo_urdf -- -j8 -l8
-Invoking command in '/home/bob/exo_ws/build/exo_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bob/exo_ws/build/exo_urdf
-Invoked command in '/home/bob/exo_ws/build/exo_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bob/exo_ws/build/exo_urdf

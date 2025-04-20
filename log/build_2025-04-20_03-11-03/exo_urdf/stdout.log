@@ -43,6 +43,7 @@
 -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.urdfdir
 -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.xacro
 -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch.py
+-- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch.py
 -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/rviz/urdf.rviz
 -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/package_run_dependencies/exo_urdf
 -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/parent_prefix_path/exo_urdf

@@ -5,6 +5,21 @@
   <!-- Properties -->
   <xacro:property name="motor_mass" value="3" />  <!-- Hip / Knee motor mass (kg) -->
   <xacro:property name="base_mass" value="1.0" />   <!-- Base structure mass -->
+
+
+  <!-- Transmission Macro -->
+  <xacro:macro name="joint_transmission" params="transmission_name joint_name actuator_name">
+    <transmission name="${transmission_name}">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint_name}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${actuator_name}">
+        <mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+  </xacro:macro>
   
   <!-- IMU Sensor Macro -->
   <xacro:macro name="imu_sensor" params="link_reference sensor_name topic_suffix update_rate:=100">
@@ -39,70 +54,47 @@
     </gazebo>
   </xacro:macro>
 
-  <!-- Transmission Macro -->
-  <xacro:macro name="joint_transmission" params="transmission_name joint_name actuator_name">
-    <transmission name="${transmission_name}">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${joint_name}">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${actuator_name}">
-        <mechanicalReduction>1</mechanicalReduction>
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </actuator>
-    </transmission>
-  </xacro:macro>
-  
-  <!-- Torque Sensor Macro -->
-  <xacro:macro name="torque_sensor" 
-            params="reference_link 
-                   sensor_name 
-                   topic_suffix 
-                   joint_name 
-                   update_rate:=250 
-                   frame:=child 
-                   measure_direction:=child_to_parent 
-                   force_stddev:=0.15 
-                   torque_stddev:=0.02">
-  
-    <gazebo reference="${reference_link}">
-      <sensor name="${sensor_name}" type="force_torque">
-        <update_rate>${update_rate}</update_rate>
-        <plugin filename="libgazebo_ros_ft_sensor.so" name="${sensor_name}_plugin">
-          <ros>
-            <namespace>/sensors</namespace>
-            <remapping>~/out:=joint_forces/${topic_suffix}</remapping>
-          </ros>
-          <joint_name>${joint_name}</joint_name>
-          <update_rate>${update_rate}</update_rate>
-          <frame_name>${joint_name}</frame_name>
-        </plugin>
-        <force_torque>
-          <frame>${frame}</frame>
-          <measure_direction>${measure_direction}</measure_direction>
-          <noise>
-            <type>gaussian</type>
-            <force>
-              <mean>0.0</mean>
-              <stddev>${force_stddev}</stddev>
-            </force>
-            <torque>
-              <mean>0.0</mean>
-              <stddev>${torque_stddev}</stddev>
-            </torque>
-          </noise>
-        </force_torque>
-      </sensor>
-    </gazebo>
-  </xacro:macro>
+  <!-- Macro Definition (Revised) -->
+  <xacro:macro name="torque_sensor" params="reference_link sensor_name topic_suffix joint_name force_stddev torque_stddev">
+  <!-- Enable feedback on the joint (critical for FT sensors) -->
+  <gazebo reference="${joint_name}">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+  <!-- Sensor definition -->
+  <gazebo>
+    <plugin name="${sensor_name}_plugin" filename="libgazebo_ros_ft_sensor.so">
+      <update_rate>1000</update_rate>
+      <ros>
+        <namespace>/sensors/torque/${topic_suffix}</namespace>
+      </ros>
+      <joint_name>${joint_name}</joint_name>
+      <noise>
+        <force>
+          <stddev>${force_stddev}</stddev>
+        </force>
+        <torque>
+          <stddev>${torque_stddev}</stddev>
+        </torque>
+      </noise>
+    </plugin>
+  </gazebo>
+</xacro:macro>
 
 
 <!-- Robot Definition -->
-
+  <link name="world"/>  <!-- Dummy link for Gazebo's world frame -->
+    <!-- Optional: Add a world-fixed joint -->
+    <joint name="fixed_joint" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 1" rpy="0 0 0"/>  <!-- 1m above ground -->
+  </joint>
+  
   <!-- Base Link with Motor Mass -->
   <link name="base_link">
     <inertial>
-      <origin xyz="0 0 1" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="4.0"/>  <!-- 1.0kg base + 3.0kg motor -->
       <!-- Empirical inertia for 3kg motor (scaled from original) -->
       <inertia 
@@ -333,44 +325,54 @@
 
   <!-- Thigh IMU -->
   <xacro:imu_sensor link_reference="thigh_link" 
-
                   sensor_name="thigh_imu_sensor" 
-                  topic_suffix="thigh"/>
-
+                  topic_suffix="thigh"
+  />
 
   <!-- Shank IMU -->
   <xacro:imu_sensor link_reference="shank_link" 
                   sensor_name="shank_imu_sensor" 
-                  topic_suffix="shank"/>
-
+                  topic_suffix="shank"
+  />
 
   <!-- Foot IMU -->
   <xacro:imu_sensor link_reference="foot_link" 
                   sensor_name="foot_imu_sensor" 
-                  topic_suffix="foot"/>
+                  topic_suffix="foot"
+  />
+  
 
 <!-- Gazebo Torque Sensors Plugin -->
-<!-- Hip Torque -->
-<xacro:torque_sensor 
+  <!-- Hip Torque -->
+  <xacro:torque_sensor 
     reference_link="thigh_link"
     sensor_name="hip_torque_sensor"
     topic_suffix="hip"
     joint_name="hip_joint"
-/>
-<!-- Knee Torque -->
-<xacro:torque_sensor 
-    reference_link="shank_link"
-    sensor_name="knee_torque_sensor"
-    topic_suffix="knee"
+    force_stddev="0.15"
+    torque_stddev="0.02"
+  />
+
+  <!-- Knee Torque -->
+  <xacro:torque_sensor 
+    reference_link="shank_link" 
+    sensor_name="knee_torque_sensor" 
+    topic_suffix="knee" 
     joint_name="knee_joint"
-/>
+    force_stddev="0.15" 
+    torque_stddev="0.02"
+  />
+
 <!-- Ankle Torque -->
 <xacro:torque_sensor 
-    reference_link="foot_link"
-    sensor_name="ankle_torque_sensor"
-    topic_suffix="ankle"
-    joint_name="ankle_joint"
+  reference_link="foot_link" 
+  sensor_name="ankle_torque_sensor" 
+  topic_suffix="ankle" 
+  joint_name="ankle_joint"
+  force_stddev="0.15" 
+  torque_stddev="0.02"
 />
+
 
   <!-- Contact Sensor -->
   <gazebo reference="foot_link">

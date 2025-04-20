@@ -1,0 +1,27 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 500  # Hz
+
+joint_state_broadcaster:
+  type: joint_state_broadcaster/JointStateBroadcaster
+
+hip_controller:
+  type: effort_controllers/JointEffortController
+  joints:
+    - hip_joint
+  gains:
+    hip_joint: {p: 100.0, i: 0.1, d: 10.0}
+
+knee_controller:
+  type: effort_controllers/JointEffortController
+  joints:
+    - knee_joint
+  gains:
+    knee_joint: {p: 80.0, i: 0.1, d: 8.0}
+
+ankle_controller:
+  type: effort_controllers/JointEffortController
+  joints:
+    - ankle_joint
+  gains:
+    ankle_joint: {p: 50.0, i: 0.05, d: 5.0}
