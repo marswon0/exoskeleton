@@ -15,25 +15,40 @@ def generate_launch_description():
 
     urdf_path = str(get_package_share_path('exo_urdf')) + '/urdf/exo.xacro'
     
-    return LaunchDescription([
-        Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher',
-            parameters=[{
+    robot_description = {
                 'robot_description': ParameterValue(
                     Command(['xacro ', str(urdf_path)]),
                     value_type=str
-                )
-            }]
-        ),
-        
-        Node(
+                ),
+                
+            }
+
+    controller_manager = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        output='screen',
+        parameters=[{'update_rate' : 200}],
+        emulate_tty=True,
+    )
+
+    robot_state_publisher = Node(
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            name='robot_state_publisher',
+            parameters=[robot_description]
+    )
+
+    gazebo_spawn = Node(
             package='gazebo_ros',
             executable='spawn_entity.py',
             arguments=['-entity', 'exoskeleton_leg', 
                       '-topic', 'robot_description',
                       '-z', '0.5'],  # Spawn above ground
             output='screen'
-        )
+    )
+    
+    return LaunchDescription([
+        robot_state_publisher,
+        controller_manager,
+        gazebo_spawn
     ])

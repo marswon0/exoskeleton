@@ -8,15 +8,15 @@
 
 
   <!-- Transmission Macro -->
-  <xacro:macro name="joint_transmission" params="transmission_name joint_name actuator_name">
+  <xacro:macro name="joint_transmission" params="transmission_name joint_name actuator_name hardware_interface:=EffortJointInterface mechanical_reduction:=1">
     <transmission name="${transmission_name}">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${joint_name}">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="${actuator_name}">
-        <mechanicalReduction>1</mechanicalReduction>
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>${mechanical_reduction}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/${hardware_interface}</hardwareInterface>
       </actuator>
     </transmission>
   </xacro:macro>
@@ -54,31 +54,31 @@
     </gazebo>
   </xacro:macro>
 
-  <!-- Macro Definition (Revised) -->
+  <!-- Torque Macro Definition (Revised) -->
   <xacro:macro name="torque_sensor" params="reference_link sensor_name topic_suffix joint_name force_stddev torque_stddev">
-  <!-- Enable feedback on the joint (critical for FT sensors) -->
-  <gazebo reference="${joint_name}">
-    <provideFeedback>true</provideFeedback>
-  </gazebo>
+    <!-- Enable feedback on the joint (critical for FT sensors) -->
+    <gazebo reference="${joint_name}">
+      <provideFeedback>true</provideFeedback>
+    </gazebo>
 
-  <!-- Sensor definition -->
-  <gazebo>
-    <plugin name="${sensor_name}_plugin" filename="libgazebo_ros_ft_sensor.so">
-      <update_rate>1000</update_rate>
-      <ros>
-        <namespace>/sensors/torque/${topic_suffix}</namespace>
-      </ros>
-      <joint_name>${joint_name}</joint_name>
-      <noise>
-        <force>
-          <stddev>${force_stddev}</stddev>
-        </force>
-        <torque>
-          <stddev>${torque_stddev}</stddev>
-        </torque>
-      </noise>
-    </plugin>
-  </gazebo>
+    <!-- Sensor definition -->
+    <gazebo>
+      <plugin name="${sensor_name}_plugin" filename="libgazebo_ros_ft_sensor.so">
+        <update_rate>1000</update_rate>
+        <ros>
+          <namespace>/sensors/${topic_suffix}</namespace>
+        </ros>
+        <joint_name>${joint_name}</joint_name>
+        <noise>
+          <force>
+            <stddev>${force_stddev}</stddev>
+          </force>
+          <torque>
+            <stddev>${torque_stddev}</stddev>
+          </torque>
+        </noise>
+      </plugin>
+    </gazebo>
 </xacro:macro>
 
 
@@ -321,7 +321,7 @@
       actuator_name="ankle_motor"
   />
 
-<!-- Gazebo Sensor Plugin -->
+<!-- Gazebo IMU Sensor Plugin -->
 
   <!-- Thigh IMU -->
   <xacro:imu_sensor link_reference="thigh_link" 
@@ -354,27 +354,27 @@
   />
 
   <!-- Knee Torque -->
-  <xacro:torque_sensor 
-    reference_link="shank_link" 
-    sensor_name="knee_torque_sensor" 
-    topic_suffix="knee" 
-    joint_name="knee_joint"
-    force_stddev="0.15" 
-    torque_stddev="0.02"
-  />
+    <xacro:torque_sensor 
+      reference_link="shank_link" 
+      sensor_name="knee_torque_sensor" 
+      topic_suffix="knee" 
+      joint_name="knee_joint"
+      force_stddev="0.15" 
+      torque_stddev="0.02"
+    />
 
-<!-- Ankle Torque -->
-<xacro:torque_sensor 
-  reference_link="foot_link" 
-  sensor_name="ankle_torque_sensor" 
-  topic_suffix="ankle" 
-  joint_name="ankle_joint"
-  force_stddev="0.15" 
-  torque_stddev="0.02"
-/>
+  <!-- Ankle Torque -->
+    <xacro:torque_sensor 
+      reference_link="foot_link" 
+      sensor_name="ankle_torque_sensor" 
+      topic_suffix="ankle" 
+      joint_name="ankle_joint"
+      force_stddev="0.15" 
+      torque_stddev="0.02"
+    />
 
 
-  <!-- Contact Sensor -->
+<!-- Contact Sensor -->
   <gazebo reference="foot_link">
     <sensor type="contact" name="foot_contact">
       <always_on>true</always_on>
@@ -382,7 +382,31 @@
     </sensor>
   </gazebo>
 
-  <!-- ROS Control Plugin (Optimized) -->
+<!-- ROS Control Configuration -->
+  <ros2_control name="exo" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <!-- Define all 3 joints here -->
+    <joint name="hip_joint">
+      <command_interface name="effort"/>  <!-- Effort control for PID -->
+      <state_interface name="position"/>  <!-- Feedback from the joint -->
+    </joint>
+
+    <joint name="knee_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="ankle_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+
+
+<!-- ROS Control Plugin (Optimized) -->
   <gazebo>
     <plugin name="exo_ros_control" filename="libgazebo_ros_control.so">
       <robotNamespace>/exo</robotNamespace>

@@ -1,1 +1,1 @@
-gazebo_ros:gazebo_ros_pkgs:robot_state_publisher:rviz2:urdf:xacro
+controller_manager:gazebo_ros:gazebo_ros_pkgs:hardware_interface:robot_state_publisher:rviz2:urdf:xacro
