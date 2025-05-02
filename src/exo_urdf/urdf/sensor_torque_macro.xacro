@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+<!-- Torque Macro Definition (Revised) -->
+  <xacro:macro name="torque_sensor" params="reference_link sensor_name topic_suffix joint_name force_stddev torque_stddev">
+    <!-- Enable feedback on the joint (critical for FT sensors) -->
+    <gazebo reference="${joint_name}">
+      <provideFeedback>true</provideFeedback>
+    </gazebo>
+
+    <!-- Sensor definition -->
+    <gazebo>
+      <plugin name="${sensor_name}_plugin" filename="libgazebo_ros_ft_sensor.so">
+        <update_rate>1000</update_rate>
+        <ros>
+          <namespace>/sensors/${topic_suffix}</namespace>
+        </ros>
+        <joint_name>${joint_name}</joint_name>
+        <noise>
+          <force>
+            <stddev>${force_stddev}</stddev>
+          </force>
+          <torque>
+            <stddev>${torque_stddev}</stddev>
+          </torque>
+        </noise>
+      </plugin>
+    </gazebo>
+</xacro:macro>
+
+</robot>

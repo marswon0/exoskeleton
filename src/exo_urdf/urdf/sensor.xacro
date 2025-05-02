@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+<xacro:include filename="$(find exo_urdf)/urdf/sensor_IMU_macro.xacro" />
+<xacro:include filename="$(find exo_urdf)/urdf/sensor_torque_macro.xacro" />
+
+<!-- Gazebo IMU Sensor Plugin -->
+  <!-- Thigh IMU -->
+  <xacro:imu_sensor link_reference="thigh_link" 
+                  sensor_name="thigh_imu_sensor" 
+                  topic_suffix="thigh"
+  />
+
+  <!-- Shank IMU -->
+  <xacro:imu_sensor link_reference="shank_link" 
+                  sensor_name="shank_imu_sensor" 
+                  topic_suffix="shank"
+  />
+
+  <!-- Foot IMU -->
+  <xacro:imu_sensor link_reference="foot_link" 
+                  sensor_name="foot_imu_sensor" 
+                  topic_suffix="foot"
+  />
+  
+
+<!-- Gazebo Torque Sensors Plugin -->
+  <!-- Hip Torque -->
+  <xacro:torque_sensor 
+    reference_link="thigh_link"
+    sensor_name="hip_torque_sensor"
+    topic_suffix="hip"
+    joint_name="hip_joint"
+    force_stddev="0.15"
+    torque_stddev="0.02"
+  />
+
+  <!-- Knee Torque -->
+    <xacro:torque_sensor 
+      reference_link="shank_link" 
+      sensor_name="knee_torque_sensor" 
+      topic_suffix="knee" 
+      joint_name="knee_joint"
+      force_stddev="0.15" 
+      torque_stddev="0.02"
+    />
+
+  <!-- Ankle Torque -->
+    <xacro:torque_sensor 
+      reference_link="foot_link" 
+      sensor_name="ankle_torque_sensor" 
+      topic_suffix="ankle" 
+      joint_name="ankle_joint"
+      force_stddev="0.15" 
+      torque_stddev="0.02"
+    />
+
+
+<!-- Contact Sensor -->
+  <gazebo reference="foot_link">
+    <sensor type="contact" name="foot_contact">
+      <always_on>true</always_on>
+      <update_rate>50</update_rate>
+    </sensor>
+  </gazebo>
+
+
+  <gazebo>
+    <plugin name="exo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/exo</robotNamespace>
+      <controlPeriod>0.001</controlPeriod>  <!-- 1kHz control rate -->
+      <robotParam>robot_description</robotParam>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <physics type="ode">
+      <max_step_size>0.002</max_step_size>
+      <real_time_update_rate>500</real_time_update_rate>
+    </physics>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,36 @@
+[0.011s] Invoking command in '/home/bob/exo_ws/build/exo_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bob/exo_ws/build/exo_urdf -- -j8 -l8
+[0.050s] Invoked command in '/home/bob/exo_ws/build/exo_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bob/exo_ws/build/exo_urdf -- -j8 -l8
+[0.059s] Invoking command in '/home/bob/exo_ws/build/exo_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bob/exo_ws/build/exo_urdf
+[0.067s] -- Install configuration: ""
+[0.067s] -- Execute custom install script
+[0.067s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.urdf.xacro
+[0.067s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/old_exo.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/robot_description.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/ros2_control.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor_IMU_macro.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor_torque_macro.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/transmission.xacro
+[0.068s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/transmission_macro.xacro
+[0.069s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch copy 2.py
+[0.069s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch copy.py
+[0.069s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch.py
+[0.069s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch copy.py
+[0.069s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch.py
+[0.069s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/rviz/urdf.rviz
+[0.070s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/package_run_dependencies/exo_urdf
+[0.070s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/parent_prefix_path/exo_urdf
+[0.070s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/ament_prefix_path.sh
+[0.070s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/ament_prefix_path.dsv
+[0.070s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/path.sh
+[0.071s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/path.dsv
+[0.071s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.bash
+[0.071s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.sh
+[0.071s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.zsh
+[0.071s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.dsv
+[0.071s] -- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/package.dsv
+[0.080s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/packages/exo_urdf
+[0.080s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/cmake/exo_urdfConfig.cmake
+[0.080s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/cmake/exo_urdfConfig-version.cmake
+[0.081s] -- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/package.xml
+[0.083s] Invoked command in '/home/bob/exo_ws/build/exo_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bob/exo_ws/build/exo_urdf

@@ -1,7 +1,16 @@
-/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.urdf
-/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.urdfdir
-/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.urdf.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/old_exo.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/robot_description.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/ros2_control.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor_IMU_macro.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor_torque_macro.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/transmission.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/transmission_macro.xacro
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch copy 2.py
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch copy.py
 /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch.py
+/home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch copy.py
 /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch.py
 /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/rviz/urdf.rviz
 /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/package_run_dependencies/exo_urdf

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+<!-- ROS Control Configuration -->
+  <ros2_control name="exo_hardware" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="hip_joint">
+      <command_interface name="position"/>  <!-- Position control for PID -->
+      <state_interface name="position"/>  <!-- Feedback from the joint -->
+    </joint>
+
+    <joint name="knee_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="ankle_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+
+
+<!-- ROS Control Plugin (Optimized) -->
+  <gazebo>
+    <plugin name="exo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/exo</robotNamespace>
+      <controlPeriod>0.001</controlPeriod>  <!-- 1kHz control rate -->
+      <robotParam>robot_description</robotParam>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <physics type="ode">
+      <max_step_size>0.002</max_step_size>
+      <real_time_update_rate>500</real_time_update_rate>
+    </physics>
+  </gazebo>
+
+</robot>

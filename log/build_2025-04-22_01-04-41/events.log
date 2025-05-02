@@ -1,0 +1,475 @@
+[0.000000] (-) TimerEvent: {}
+[0.000116] (-) JobUnselected: {'identifier': 'exo_urdf'}
+[0.000334] (-) JobUnselected: {'identifier': 'gz_ros2_control_demos'}
+[0.000356] (-) JobUnselected: {'identifier': 'gz_ros2_control_tests'}
+[0.000373] (-) JobUnselected: {'identifier': 'ign_ros2_control'}
+[0.000388] (-) JobUnselected: {'identifier': 'ign_ros2_control_demos'}
+[0.000406] (gz_ros2_control) JobQueued: {'identifier': 'gz_ros2_control', 'dependencies': OrderedDict()}
+[0.000425] (gz_ros2_control) JobStarted: {'identifier': 'gz_ros2_control'}
+[0.006606] (gz_ros2_control) JobProgress: {'identifier': 'gz_ros2_control', 'progress': 'cmake'}
+[0.007049] (gz_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '/home/bob/exo_ws/src/gz_ros2_control/gz_ros2_control', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/bob/exo_ws/install/gz_ros2_control'], 'cwd': '/home/bob/exo_ws/build/gz_ros2_control', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/opt/ros/humble/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/usr/share/gz/gz-sim7:/opt/ros/humble/share'), ('LANGUAGE', 'en_CA:en'), ('USER', 'bob'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bob'), ('OLDPWD', '/home/bob/exo_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3821'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/bob/exo_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bob'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bob'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1269,unix/ubuntu:/tmp/.ICE-unix/1269'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/36b73830_349c_4aa2_a2ff_63fc23c867bd'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_CA.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6UJA52'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bob/exo_ws/install/exo_urdf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bob/exo_ws/build/gz_ros2_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bob/exo_ws/install/exo_urdf:/opt/ros/humble')]), 'shell': False}
+[0.059575] (gz_ros2_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099361] (-) TimerEvent: {}
+[0.113567] (gz_ros2_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.120223] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.184786] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.194253] (gz_ros2_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.194599] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.194975] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.198172] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199464] (-) TimerEvent: {}
+[0.270389] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.281712] (gz_ros2_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.281929] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.282596] (gz_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.284764] (gz_ros2_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299589] (-) TimerEvent: {}
+[0.399843] (-) TimerEvent: {}
+[0.461929] (gz_ros2_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.499947] (-) TimerEvent: {}
+[0.534706] (gz_ros2_control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.559673] (gz_ros2_control) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.562445] (gz_ros2_control) StdoutLine: {'line': b'-- Found controller_manager: 2.49.0 (/opt/ros/humble/share/controller_manager/cmake)\n'}
+[0.600084] (-) TimerEvent: {}
+[0.616375] (gz_ros2_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.621252] (gz_ros2_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.629982] (gz_ros2_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.644381] (gz_ros2_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.659459] (gz_ros2_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700193] (-) TimerEvent: {}
+[0.800485] (-) TimerEvent: {}
+[0.889909] (gz_ros2_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.892162] (gz_ros2_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.900579] (-) TimerEvent: {}
+[0.915411] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.960995] (gz_ros2_control) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.964207] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.980346] (gz_ros2_control) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.983983] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.991975] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.000662] (-) TimerEvent: {}
+[1.000837] (gz_ros2_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.007721] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.066392] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.066717] (gz_ros2_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.100767] (-) TimerEvent: {}
+[1.127288] (gz_ros2_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.128804] (gz_ros2_control) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.200845] (-) TimerEvent: {}
+[1.236154] (gz_ros2_control) StdoutLine: {'line': b'-- Found yaml_cpp_vendor: 8.0.2 (/opt/ros/humble/share/yaml_cpp_vendor/cmake)\n'}
+[1.241034] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-gazebo6 -- found version 6.17.0\n'}
+[1.250870] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gazebo6\n'}
+[1.252479] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.8.0\n'}
+[1.252971] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of sdformat12\n'}
+[1.258076] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.269214] (gz_ros2_control) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[1.295978] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.296376] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.299026] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.299397] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[1.300912] (-) TimerEvent: {}
+[1.301855] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.302227] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[1.302688] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [loader]\n'}
+[1.304197] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1-loader -- found version 1.4.0\n'}
+[1.304658] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-loader\n'}
+[1.305066] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [register]\n'}
+[1.306621] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1-register -- found version 1.4.0\n'}
+[1.307061] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-register\n'}
+[1.309015] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[1.309376] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11\n'}
+[1.339325] (gz_ros2_control) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.355053] (gz_ros2_control) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[1.360502] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[1.374328] (gz_ros2_control) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[1.401040] (-) TimerEvent: {}
+[1.403577] (gz_ros2_control) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[1.409808] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[1.419522] (gz_ros2_control) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[1.445137] (gz_ros2_control) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[1.445508] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.445954] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[1.446093] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-utils1> component [cli]\n'}
+[1.447670] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1-cli -- found version 1.5.1\n'}
+[1.448084] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1-cli\n'}
+[1.450027] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.450397] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs8\n'}
+[1.465865] (gz_ros2_control) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[1.466688] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.473693] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [log]\n'}
+[1.475219] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11-log -- found version 11.4.1\n'}
+[1.475709] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-log\n'}
+[1.476109] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [parameters]\n'}
+[1.477670] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11-parameters -- found version 11.4.1\n'}
+[1.478084] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-parameters\n'}
+[1.478989] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.480568] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.480992] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[1.481641] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.482441] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.483661] (gz_ros2_control) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[1.491004] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [profiler]\n'}
+[1.492556] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-profiler -- found version 4.7.0\n'}
+[1.493086] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-profiler\n'}
+[1.493543] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[1.495100] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-events -- found version 4.7.0\n'}
+[1.495645] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-events\n'}
+[1.495987] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.496559] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [av]\n'}
+[1.498109] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-av -- found version 4.7.0\n'}
+[1.498643] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-av\n'}
+[1.501085] (-) TimerEvent: {}
+[1.503455] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[1.514101] (gz_ros2_control) StdoutLine: {'line': b'--   Found libswscale, version 5.9.100\n'}
+[1.539349] (gz_ros2_control) StdoutLine: {'line': b'-- Found SWSCALE: TRUE  \n'}
+[1.544394] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavdevice >= 56.4.100'\n"}
+[1.555301] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavdevice , version 58.13.100\n'}
+[1.582717] (gz_ros2_control) StdoutLine: {'line': b'-- Found AVDEVICE: TRUE (Required is at least version "56.4.100") \n'}
+[1.587326] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavformat'\n"}
+[1.596894] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavformat, version 58.76.100\n'}
+[1.601175] (-) TimerEvent: {}
+[1.622354] (gz_ros2_control) StdoutLine: {'line': b'-- Found AVFORMAT: TRUE  \n'}
+[1.627113] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[1.637939] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavcodec, version 58.134.100\n'}
+[1.665169] (gz_ros2_control) StdoutLine: {'line': b'-- Found AVCODEC: TRUE  \n'}
+[1.670035] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[1.679582] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavutil, version 56.70.100\n'}
+[1.701300] (-) TimerEvent: {}
+[1.703797] (gz_ros2_control) StdoutLine: {'line': b'-- Found AVUTIL: TRUE  \n'}
+[1.706277] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools7 -- found version 7.3.1\n'}
+[1.706906] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools7\n'}
+[1.769549] (gz_ros2_control) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[1.779019] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[1.789014] (gz_ros2_control) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[1.801387] (-) TimerEvent: {}
+[1.812944] (gz_ros2_control) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[1.818047] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[1.828138] (gz_ros2_control) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.854220] (gz_ros2_control) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[1.854813] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.855323] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.855923] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.858276] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-gui6 -- found version 6.8.0\n'}
+[1.858889] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gui6\n'}
+[1.881523] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.881990] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.882590] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.883163] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[1.885077] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[1.885695] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-rendering6\n'}
+[1.886128] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.886791] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.886955] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-math6> component [eigen3]\n'}
+[1.888858] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6-eigen3 -- found version 6.15.1\n'}
+[1.889467] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6-eigen3\n'}
+[1.896163] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.896784] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[1.897019] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.897110] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.901561] (-) TimerEvent: {}
+[1.905891] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [graphics]\n'}
+[1.907692] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-graphics -- found version 4.7.0\n'}
+[1.908330] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-graphics\n'}
+[1.908801] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.909377] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.910070] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[1.911042] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.911589] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[1.911703] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [all]\n'}
+[1.913624] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for all libraries of ignition-plugin1 -- found version 1.4.0\n'}
+[1.914279] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.916628] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.959863] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5 -- found version 5.3.2\n'}
+[1.960283] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5\n'}
+[1.960716] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.961159] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[1.961601] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[1.962706] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [heightmap]\n'}
+[1.965080] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5-heightmap -- found version 5.3.2\n'}
+[1.965705] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-heightmap\n'}
+[1.966190] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.966960] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [mesh]\n'}
+[1.968644] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5-mesh -- found version 5.3.2\n'}
+[1.969077] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-mesh\n'}
+[1.969400] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.969879] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [sdf]\n'}
+[1.971408] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5-sdf -- found version 5.3.2\n'}
+[1.971937] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-sdf\n'}
+[1.972302] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.8.0\n'}
+[1.974381] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[1.974818] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6\n'}
+[1.990322] (gz_ros2_control) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.991220] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.991675] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[1.992112] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[1.992606] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[1.993028] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[1.993591] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.8.0\n'}
+[1.994247] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [air_pressure]\n'}
+[1.995968] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-air_pressure -- found version 6.8.1\n'}
+[1.996403] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-air_pressure\n'}
+[1.996929] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [altimeter]\n'}
+[1.998499] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-altimeter -- found version 6.8.1\n'}
+[1.998958] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-altimeter\n'}
+[1.999349] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [imu]\n'}
+[2.000971] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-imu -- found version 6.8.1\n'}
+[2.001365] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-imu\n'}
+[2.001622] (-) TimerEvent: {}
+[2.001931] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [force_torque]\n'}
+[2.003400] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-force_torque -- found version 6.8.1\n'}
+[2.003923] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-force_torque\n'}
+[2.004540] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [logical_camera]\n'}
+[2.006419] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-logical_camera -- found version 6.8.1\n'}
+[2.006986] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-logical_camera\n'}
+[2.007556] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [magnetometer]\n'}
+[2.009600] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-magnetometer -- found version 6.8.1\n'}
+[2.010048] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-magnetometer\n'}
+[2.010568] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [navsat]\n'}
+[2.012045] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-navsat -- found version 6.8.1\n'}
+[2.012551] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-navsat\n'}
+[2.013123] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rendering]\n'}
+[2.015202] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rendering -- found version 6.8.1\n'}
+[2.015847] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rendering\n'}
+[2.016415] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [lidar]\n'}
+[2.017940] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-lidar -- found version 6.8.1\n'}
+[2.018434] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-lidar\n'}
+[2.018781] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[2.019329] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [gpu_lidar]\n'}
+[2.020891] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-gpu_lidar -- found version 6.8.1\n'}
+[2.021368] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-gpu_lidar\n'}
+[2.021776] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[2.022333] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [camera]\n'}
+[2.023849] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-camera -- found version 6.8.1\n'}
+[2.024248] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-camera\n'}
+[2.024596] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[2.025143] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [boundingbox_camera]\n'}
+[2.026565] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-boundingbox_camera -- found version 6.8.1\n'}
+[2.026998] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-boundingbox_camera\n'}
+[2.027455] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [segmentation_camera]\n'}
+[2.029095] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-segmentation_camera -- found version 6.8.1\n'}
+[2.029574] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-segmentation_camera\n'}
+[2.030061] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [depth_camera]\n'}
+[2.031713] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-depth_camera -- found version 6.8.1\n'}
+[2.032187] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-depth_camera\n'}
+[2.032617] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[2.033157] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rgbd_camera]\n'}
+[2.035824] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rgbd_camera -- found version 6.8.1\n'}
+[2.036237] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rgbd_camera\n'}
+[2.036622] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[2.037159] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [thermal_camera]\n'}
+[2.039608] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-thermal_camera -- found version 6.8.1\n'}
+[2.040088] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-thermal_camera\n'}
+[2.040510] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.1\n'}
+[2.041962] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[2.042363] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.044376] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[2.062207] (gz_ros2_control) StdoutLine: {'line': b'-- Compiling against Gazebo fortress\n'}
+[2.062455] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[2.101716] (-) TimerEvent: {}
+[2.109508] (gz_ros2_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.201815] (-) TimerEvent: {}
+[2.213794] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.214947] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.215484] (gz_ros2_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/bob/exo_ws/src/gz_ros2_control/gz_ros2_control/include\n'}
+[2.215580] (gz_ros2_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.216442] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.216546] (gz_ros2_control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.217294] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.218472] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.218568] (gz_ros2_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.219026] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.222564] (gz_ros2_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.301902] (-) TimerEvent: {}
+[2.309096] (gz_ros2_control) StdoutLine: {'line': b'-- Generating done\n'}
+[2.321049] (gz_ros2_control) StdoutLine: {'line': b'-- Build files have been written to: /home/bob/exo_ws/build/gz_ros2_control\n'}
+[2.336831] (gz_ros2_control) CommandEnded: {'returncode': 0}
+[2.337546] (gz_ros2_control) JobProgress: {'identifier': 'gz_ros2_control', 'progress': 'build'}
+[2.338475] (gz_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bob/exo_ws/build/gz_ros2_control', '--', '-j8', '-l8'], 'cwd': '/home/bob/exo_ws/build/gz_ros2_control', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/opt/ros/humble/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/usr/share/gz/gz-sim7:/opt/ros/humble/share'), ('LANGUAGE', 'en_CA:en'), ('USER', 'bob'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bob'), ('OLDPWD', '/home/bob/exo_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3821'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/bob/exo_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bob'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bob'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1269,unix/ubuntu:/tmp/.ICE-unix/1269'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/36b73830_349c_4aa2_a2ff_63fc23c867bd'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_CA.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6UJA52'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bob/exo_ws/install/exo_urdf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bob/exo_ws/build/gz_ros2_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bob/exo_ws/install/exo_urdf:/opt/ros/humble')]), 'shell': False}
+[2.385080] (gz_ros2_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/gz_hardware_plugins.dir/src/gz_system.cpp.o\x1b[0m\n'}
+[2.385308] (gz_ros2_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ign_ros2_control-system.dir/src/gz_ros2_control_plugin.cpp.o\x1b[0m\n'}
+[2.385446] (gz_ros2_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/gz_ros2_control-system.dir/src/gz_ros2_control_plugin.cpp.o\x1b[0m\n'}
+[2.402008] (-) TimerEvent: {}
+[2.502312] (-) TimerEvent: {}
+[2.602640] (-) TimerEvent: {}
+[2.702893] (-) TimerEvent: {}
+[2.803202] (-) TimerEvent: {}
+[2.903513] (-) TimerEvent: {}
+[3.003823] (-) TimerEvent: {}
+[3.104166] (-) TimerEvent: {}
+[3.204504] (-) TimerEvent: {}
+[3.304856] (-) TimerEvent: {}
+[3.405153] (-) TimerEvent: {}
+[3.505417] (-) TimerEvent: {}
+[3.605659] (-) TimerEvent: {}
+[3.705897] (-) TimerEvent: {}
+[3.806152] (-) TimerEvent: {}
+[3.906421] (-) TimerEvent: {}
+[4.006701] (-) TimerEvent: {}
+[4.106966] (-) TimerEvent: {}
+[4.207271] (-) TimerEvent: {}
+[4.307574] (-) TimerEvent: {}
+[4.407806] (-) TimerEvent: {}
+[4.508056] (-) TimerEvent: {}
+[4.608395] (-) TimerEvent: {}
+[4.708755] (-) TimerEvent: {}
+[4.809093] (-) TimerEvent: {}
+[4.909397] (-) TimerEvent: {}
+[5.009714] (-) TimerEvent: {}
+[5.110041] (-) TimerEvent: {}
+[5.210351] (-) TimerEvent: {}
+[5.310693] (-) TimerEvent: {}
+[5.411005] (-) TimerEvent: {}
+[5.511344] (-) TimerEvent: {}
+[5.611664] (-) TimerEvent: {}
+[5.711996] (-) TimerEvent: {}
+[5.812315] (-) TimerEvent: {}
+[5.912667] (-) TimerEvent: {}
+[6.012989] (-) TimerEvent: {}
+[6.113338] (-) TimerEvent: {}
+[6.213680] (-) TimerEvent: {}
+[6.314020] (-) TimerEvent: {}
+[6.414346] (-) TimerEvent: {}
+[6.514709] (-) TimerEvent: {}
+[6.615071] (-) TimerEvent: {}
+[6.715466] (-) TimerEvent: {}
+[6.815832] (-) TimerEvent: {}
+[6.916199] (-) TimerEvent: {}
+[7.016502] (-) TimerEvent: {}
+[7.116817] (-) TimerEvent: {}
+[7.217126] (-) TimerEvent: {}
+[7.317443] (-) TimerEvent: {}
+[7.417748] (-) TimerEvent: {}
+[7.518068] (-) TimerEvent: {}
+[7.618391] (-) TimerEvent: {}
+[7.718732] (-) TimerEvent: {}
+[7.819044] (-) TimerEvent: {}
+[7.919348] (-) TimerEvent: {}
+[8.019670] (-) TimerEvent: {}
+[8.119993] (-) TimerEvent: {}
+[8.220322] (-) TimerEvent: {}
+[8.320673] (-) TimerEvent: {}
+[8.421033] (-) TimerEvent: {}
+[8.521347] (-) TimerEvent: {}
+[8.621668] (-) TimerEvent: {}
+[8.721985] (-) TimerEvent: {}
+[8.822307] (-) TimerEvent: {}
+[8.922646] (-) TimerEvent: {}
+[9.022966] (-) TimerEvent: {}
+[9.123302] (-) TimerEvent: {}
+[9.223648] (-) TimerEvent: {}
+[9.323974] (-) TimerEvent: {}
+[9.424319] (-) TimerEvent: {}
+[9.524705] (-) TimerEvent: {}
+[9.625074] (-) TimerEvent: {}
+[9.725446] (-) TimerEvent: {}
+[9.825770] (-) TimerEvent: {}
+[9.926107] (-) TimerEvent: {}
+[10.026398] (-) TimerEvent: {}
+[10.126648] (-) TimerEvent: {}
+[10.226883] (-) TimerEvent: {}
+[10.327158] (-) TimerEvent: {}
+[10.427450] (-) TimerEvent: {}
+[10.527696] (-) TimerEvent: {}
+[10.627955] (-) TimerEvent: {}
+[10.728213] (-) TimerEvent: {}
+[10.828494] (-) TimerEvent: {}
+[10.928738] (-) TimerEvent: {}
+[11.028998] (-) TimerEvent: {}
+[11.129309] (-) TimerEvent: {}
+[11.229601] (-) TimerEvent: {}
+[11.329889] (-) TimerEvent: {}
+[11.430127] (-) TimerEvent: {}
+[11.530413] (-) TimerEvent: {}
+[11.630671] (-) TimerEvent: {}
+[11.730942] (-) TimerEvent: {}
+[11.831234] (-) TimerEvent: {}
+[11.931509] (-) TimerEvent: {}
+[12.031779] (-) TimerEvent: {}
+[12.132062] (-) TimerEvent: {}
+[12.232338] (-) TimerEvent: {}
+[12.332632] (-) TimerEvent: {}
+[12.432902] (-) TimerEvent: {}
+[12.533173] (-) TimerEvent: {}
+[12.633417] (-) TimerEvent: {}
+[12.733655] (-) TimerEvent: {}
+[12.833905] (-) TimerEvent: {}
+[12.934136] (-) TimerEvent: {}
+[13.034377] (-) TimerEvent: {}
+[13.134633] (-) TimerEvent: {}
+[13.234858] (-) TimerEvent: {}
+[13.335085] (-) TimerEvent: {}
+[13.435312] (-) TimerEvent: {}
+[13.535556] (-) TimerEvent: {}
+[13.635788] (-) TimerEvent: {}
+[13.736008] (-) TimerEvent: {}
+[13.836247] (-) TimerEvent: {}
+[13.936503] (-) TimerEvent: {}
+[14.036739] (-) TimerEvent: {}
+[14.136963] (-) TimerEvent: {}
+[14.237216] (-) TimerEvent: {}
+[14.337480] (-) TimerEvent: {}
+[14.437721] (-) TimerEvent: {}
+[14.537949] (-) TimerEvent: {}
+[14.638211] (-) TimerEvent: {}
+[14.738476] (-) TimerEvent: {}
+[14.838720] (-) TimerEvent: {}
+[14.938963] (-) TimerEvent: {}
+[14.986450] (gz_ros2_control) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libgz_hardware_plugins.so\x1b[0m\n'}
+[15.039104] (-) TimerEvent: {}
+[15.139445] (-) TimerEvent: {}
+[15.239766] (-) TimerEvent: {}
+[15.340103] (-) TimerEvent: {}
+[15.410935] (gz_ros2_control) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX shared library libgz_ros2_control-system.so\x1b[0m\n'}
+[15.440237] (-) TimerEvent: {}
+[15.480481] (gz_ros2_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libign_ros2_control-system.so\x1b[0m\n'}
+[15.540398] (-) TimerEvent: {}
+[15.640893] (-) TimerEvent: {}
+[15.698327] (gz_ros2_control) StdoutLine: {'line': b'[100%] Built target gz_hardware_plugins\n'}
+[15.740994] (-) TimerEvent: {}
+[15.841309] (-) TimerEvent: {}
+[15.941685] (-) TimerEvent: {}
+[16.042091] (-) TimerEvent: {}
+[16.142658] (-) TimerEvent: {}
+[16.243478] (-) TimerEvent: {}
+[16.343798] (-) TimerEvent: {}
+[16.444109] (-) TimerEvent: {}
+[16.466898] (gz_ros2_control) StdoutLine: {'line': b'[100%] Built target gz_ros2_control-system\n'}
+[16.527567] (gz_ros2_control) StdoutLine: {'line': b'[100%] Built target ign_ros2_control-system\n'}
+[16.536253] (gz_ros2_control) CommandEnded: {'returncode': 0}
+[16.536815] (gz_ros2_control) JobProgress: {'identifier': 'gz_ros2_control', 'progress': 'install'}
+[16.543752] (gz_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/bob/exo_ws/build/gz_ros2_control'], 'cwd': '/home/bob/exo_ws/build/gz_ros2_control', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/opt/ros/humble/lib'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/usr/share/gz/gz-sim7:/opt/ros/humble/share'), ('LANGUAGE', 'en_CA:en'), ('USER', 'bob'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bob'), ('OLDPWD', '/home/bob/exo_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3821'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/bob/exo_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bob'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bob'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1269,unix/ubuntu:/tmp/.ICE-unix/1269'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/36b73830_349c_4aa2_a2ff_63fc23c867bd'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_CA.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6UJA52'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.119'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bob/exo_ws/install/exo_urdf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bob/exo_ws/build/gz_ros2_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bob/exo_ws/install/exo_urdf:/opt/ros/humble')]), 'shell': False}
+[16.544849] (-) TimerEvent: {}
+[16.549861] (gz_ros2_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[16.550246] (gz_ros2_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[16.550656] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/lib/libgz_hardware_plugins.so\n'}
+[16.557744] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/include/gz_ros2_control/gz_ros2_control_plugin.hpp\n'}
+[16.564241] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/include/gz_ros2_control/gz_system.hpp\n'}
+[16.570597] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/include/gz_ros2_control/gz_system_interface.hpp\n'}
+[16.578116] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/environment/library_path.sh\n'}
+[16.584854] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/environment/library_path.dsv\n'}
+[16.592074] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/lib/libgz_ros2_control-system.so\n'}
+[16.599127] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/lib/libign_ros2_control-system.so\n'}
+[16.605813] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control//gz_hardware_plugins.xml\n'}
+[16.612727] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/ament_index/resource_index/package_run_dependencies/gz_ros2_control\n'}
+[16.619481] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/ament_index/resource_index/parent_prefix_path/gz_ros2_control\n'}
+[16.626625] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/environment/ament_prefix_path.sh\n'}
+[16.633176] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/environment/ament_prefix_path.dsv\n'}
+[16.639845] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/environment/path.sh\n'}
+[16.644931] (-) TimerEvent: {}
+[16.646444] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/environment/path.dsv\n'}
+[16.653142] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/local_setup.bash\n'}
+[16.659939] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/local_setup.sh\n'}
+[16.666474] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/local_setup.zsh\n'}
+[16.673632] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/local_setup.dsv\n'}
+[16.681279] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/package.dsv\n'}
+[16.687993] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/ament_index/resource_index/packages/gz_ros2_control\n'}
+[16.695621] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/ament_index/resource_index/gz_ros2_control__pluginlib__plugin/gz_ros2_control\n'}
+[16.702502] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[16.709643] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[16.716445] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/cmake/gz_ros2_controlConfig.cmake\n'}
+[16.723092] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/cmake/gz_ros2_controlConfig-version.cmake\n'}
+[16.730082] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/bob/exo_ws/install/gz_ros2_control/share/gz_ros2_control/package.xml\n'}
+[16.738128] (gz_ros2_control) CommandEnded: {'returncode': 0}
+[16.745267] (-) TimerEvent: {}
+[16.755857] (gz_ros2_control) JobEnded: {'identifier': 'gz_ros2_control', 'rc': 0}
+[16.756304] (-) EventReactorShutdown: {}
