@@ -2,23 +2,24 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   
 <!-- ROS Control Configuration -->
-  <ros2_control name="exo_hardware" type="system">
+  <ros2_control name="exo" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
 
+    <!-- Define all 3 joints here -->
     <joint name="hip_joint">
-      <command_interface name="position"/>  <!-- Position control for PID -->
+      <command_interface name="effort"/>  <!-- Effort control for PID -->
       <state_interface name="position"/>  <!-- Feedback from the joint -->
     </joint>
 
     <joint name="knee_joint">
-      <command_interface name="position"/>
+      <command_interface name="effort"/>
       <state_interface name="position"/>
     </joint>
 
     <joint name="ankle_joint">
-      <command_interface name="position"/>
+      <command_interface name="effort"/>
       <state_interface name="position"/>
     </joint>
   </ros2_control>
@@ -30,6 +31,7 @@
       <robotNamespace>/exo</robotNamespace>
       <controlPeriod>0.001</controlPeriod>  <!-- 1kHz control rate -->
       <robotParam>robot_description</robotParam>
+      <parameters>$(find exo_urdf)/config/controllers.yaml</parameters>
     </plugin>
   </gazebo>
 

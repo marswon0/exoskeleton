@@ -1,10 +1,25 @@
 <?xml version="1.0"?>
 <robot name="exo" xmlns:xacro="http://ros.org/wiki/xacro">
 
+<!-- Properties -->
+<xacro:property name="motor_mass" value="3" />  <!-- Hip / Knee motor mass (kg) -->
+<xacro:property name="base_mass" value="1.0" />   <!-- Base structure mass -->
+
+<!-- Macros -->
+<xacro:include filename="$(find exo_urdf)/urdf/transmission_macro.xacro" />
+<xacro:include filename="$(find exo_urdf)/urdf/sensor_IMU_macro.xacro" />
+<xacro:include filename="$(find exo_urdf)/urdf/sensor_torque_macro.xacro" />
+
+<!-- Robot Description (link / joint) -->
 <xacro:include filename="$(find exo_urdf)/urdf/robot_description.xacro" />
 
+<!-- Gazebo Transmission -->
 <xacro:include filename="$(find exo_urdf)/urdf/transmission.xacro" />
 
+<!-- Sensors -->
+<xacro:include filename="$(find exo_urdf)/urdf/sensor.xacro" />
+
+<!-- ROS2 Control -->
 <xacro:include filename="$(find exo_urdf)/urdf/ros2_control.xacro" />
 
 

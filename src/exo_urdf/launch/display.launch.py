@@ -15,7 +15,7 @@ def generate_launch_description():
     show_gui = LaunchConfiguration('gui')
     
     share_dir = get_package_share_directory('exo_urdf')
-    xacro_file = os.path.join(share_dir, 'urdf', 'old_exo.xacro')
+    xacro_file = os.path.join(share_dir, 'urdf', 'exo.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_urdf = robot_description_config.toxml()
 

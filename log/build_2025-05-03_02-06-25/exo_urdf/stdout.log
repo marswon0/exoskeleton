@@ -1,0 +1,32 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/exo.urdf.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/old_exo.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/robot_description.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/ros2_control.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor_IMU_macro.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/sensor_torque_macro.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/transmission.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/urdf/transmission_macro.xacro
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch copy 2.py
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch copy.py
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/display.launch.py
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch copy.py
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/launch/test.launch.py
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/rviz/urdf.rviz
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/package_run_dependencies/exo_urdf
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/parent_prefix_path/exo_urdf
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/path.sh
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/environment/path.dsv
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.bash
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.sh
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.zsh
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/local_setup.dsv
+-- Symlinking: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/package.dsv
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/ament_index/resource_index/packages/exo_urdf
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/cmake/exo_urdfConfig.cmake
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/cmake/exo_urdfConfig-version.cmake
+-- Up-to-date symlink: /home/bob/exo_ws/install/exo_urdf/share/exo_urdf/package.xml

@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   
-<!-- Properties -->
-  <xacro:property name="motor_mass" value="3.0" />  <!-- Hip / Knee motor mass (kg) -->
-  <xacro:property name="base_mass" value="1.0" />   <!-- Base structure mass --> 
-
 <!-- Robot Definition -->
   <link name="world"/>  <!-- Dummy link for Gazebo's world frame -->
     <!-- Optional: Add a world-fixed joint -->
@@ -18,7 +14,7 @@
   <link name="base_link">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="motor_mass + base_mass"/>  <!-- 1.0kg base + 3.0kg motor -->
+      <mass value="4.0"/>  <!-- 1.0kg base + 3.0kg motor -->
       <!-- Empirical inertia for 3kg motor (scaled from original) -->
       <inertia 
         ixx="0.04" ixy="0" ixz="0"
@@ -224,6 +220,5 @@
     <kp>1000000</kp>  <!-- Contact Stiffness [N/m] -->
     <kd>100</kd>      <!-- Contact Damping [N·s/m] -->
   </gazebo>
-
-
+ 
 </robot>

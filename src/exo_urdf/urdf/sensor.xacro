@@ -1,10 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  
-<xacro:include filename="$(find exo_urdf)/urdf/sensor_IMU_macro.xacro" />
-<xacro:include filename="$(find exo_urdf)/urdf/sensor_torque_macro.xacro" />
 
 <!-- Gazebo IMU Sensor Plugin -->
+
   <!-- Thigh IMU -->
   <xacro:imu_sensor link_reference="thigh_link" 
                   sensor_name="thigh_imu_sensor" 
@@ -62,22 +60,6 @@
       <always_on>true</always_on>
       <update_rate>50</update_rate>
     </sensor>
-  </gazebo>
-
-
-  <gazebo>
-    <plugin name="exo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/exo</robotNamespace>
-      <controlPeriod>0.001</controlPeriod>  <!-- 1kHz control rate -->
-      <robotParam>robot_description</robotParam>
-    </plugin>
-  </gazebo>
-
-  <gazebo>
-    <physics type="ode">
-      <max_step_size>0.002</max_step_size>
-      <real_time_update_rate>500</real_time_update_rate>
-    </physics>
   </gazebo>
 
 </robot>
